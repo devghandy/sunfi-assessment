@@ -16,6 +16,7 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 import 'cypress-fill-command'
+import 'cypress-mochawesome-reporter/register'
 import './custom-commands.js/commom-actions'
 
 // Alternatively you can use CommonJS syntax:

@@ -1,6 +1,7 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  reporter: 'cypress-mochawesome-reporter',
   e2e: {
     baseUrl: "https://d28dp6fycxce58.cloudfront.net/",
     viewportHeight: 938,
@@ -8,7 +9,7 @@ module.exports = defineConfig({
     defaultCommandTimeout: 3000,
     testIsolation: false,
     setupNodeEvents(on, config) {
-      // implement node event listeners here
+      require('cypress-mochawesome-reporter/plugin')(on);
     },
   },
 });
